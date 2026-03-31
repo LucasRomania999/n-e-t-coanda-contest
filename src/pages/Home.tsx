@@ -120,13 +120,14 @@ const Home = () => {
           <History className="inline h-7 w-7 mr-2" />
           // Contest History
         </h2>
-        <div className="relative pl-8 border-l-2 border-border ml-4 space-y-8">
+        <div className="space-y-6 max-w-2xl">
           {timeline.map((item) => (
-            <div key={item.year} className="relative">
-              {/* Dot */}
-              <div className="absolute -left-[calc(2rem+5px)] w-3 h-3 rounded-full bg-primary border-2 border-background top-1.5" />
-              
-              <div className="rounded-lg border border-border bg-card p-4 transition-all duration-300 hover:border-primary/30 max-w-xl">
+            <div key={item.year} className="flex gap-4">
+              <div className="flex flex-col items-center">
+                <div className="w-3 h-3 rounded-full bg-primary shrink-0 mt-2" />
+                <div className="w-px flex-1 bg-border" />
+              </div>
+              <div className="rounded-lg border border-border bg-card p-4 mb-2 flex-1 transition-all duration-300 hover:border-primary/30">
                 <span className="font-mono-display text-primary text-sm font-bold">{item.year}</span>
                 <h3 className="font-mono-display font-semibold mt-1">{item.title}</h3>
                 <p className="text-sm text-muted-foreground mt-1">{item.description}</p>
