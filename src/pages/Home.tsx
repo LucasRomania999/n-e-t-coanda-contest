@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Trophy, BookOpen, ClipboardList, Printer } from "lucide-react";
+import { Calendar, MapPin, Trophy, BookOpen, ClipboardList, Printer, History, Images, X } from "lucide-react";
+
+import gallery3dPrinting from "@/assets/gallery-3d-printing.jpg";
+import galleryExam from "@/assets/gallery-exam.jpg";
+import galleryAwards from "@/assets/gallery-awards.jpg";
+import galleryTeamwork from "@/assets/gallery-teamwork.jpg";
+import galleryParts from "@/assets/gallery-parts.jpg";
+import galleryVenue from "@/assets/gallery-venue.jpg";
 
 const features = [
   {
@@ -23,7 +31,30 @@ const features = [
   },
 ];
 
+const timeline = [
+  { year: "2018", title: "Founding Edition", description: "Henri Coandă Technical College launched the first National English Technology contest with 12 participating schools from the Timișoara region." },
+  { year: "2019", title: "Going National", description: "The contest expanded to include schools from across Romania, introducing the 3D printing practical component alongside the written exam." },
+  { year: "2020", title: "Virtual Adaptation", description: "Adapted to an online format during the pandemic, reaching a record 35 schools and proving the contest's resilience." },
+  { year: "2021", title: "Hybrid Format", description: "Introduced a hybrid model combining online theoretical exams with in-person practical sessions at the Mechanical Faculty." },
+  { year: "2022", title: "International Guests", description: "Welcomed observer delegations from Hungary and Serbia, setting the stage for future cross-border collaboration." },
+  { year: "2023", title: "Advanced 3D Challenges", description: "Introduced multi-material printing challenges and real-world engineering briefs from industry partners." },
+  { year: "2024", title: "Record Participation", description: "Over 50 schools and 200 contestants participated, with live-streamed award ceremonies and industry sponsorships." },
+  { year: "2025", title: "Digital Platform Launch", description: "Launched the first dedicated online preparation and registration platform, streamlining the contest experience." },
+  { year: "2026", title: "NET'26 — Current Edition", description: "The most ambitious edition yet, held at the Mechanical Faculty in Timișoara on 24 April 2026." },
+];
+
+const galleryImages = [
+  { src: gallery3dPrinting, alt: "Students working with 3D printers during the practical contest", caption: "3D Printing Workshop" },
+  { src: galleryExam, alt: "Contestants taking the written theoretical exam", caption: "Theoretical Exam" },
+  { src: galleryAwards, alt: "Award ceremony with winners receiving trophies", caption: "Award Ceremony" },
+  { src: galleryTeamwork, alt: "Students collaborating on engineering prototypes", caption: "Team Collaboration" },
+  { src: galleryParts, alt: "3D printed mechanical parts and prototypes", caption: "3D Printed Prototypes" },
+  { src: galleryVenue, alt: "The Mechanical Faculty venue in Timișoara", caption: "Contest Venue" },
+];
+
 const Home = () => {
+  const [lightbox, setLightbox] = useState<number | null>(null);
+
   return (
     <div className="min-h-screen pt-16">
       {/* Hero */}
@@ -82,6 +113,84 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* History */}
+      <section className="container pb-20">
+        <h2 className="font-mono-display text-2xl font-bold mb-10 text-primary">
+          <History className="inline h-7 w-7 mr-2" />
+          // Contest History
+        </h2>
+        <div className="relative">
+          {/* Timeline line */}
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-px" />
+
+          <div className="space-y-8">
+            {timeline.map((item, i) => (
+              <div key={item.year} className={`relative flex items-start gap-6 md:gap-0 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
+                {/* Dot */}
+                <div className="absolute left-4 md:left-1/2 w-3 h-3 rounded-full bg-primary border-2 border-background -translate-x-1.5 mt-1.5 z-10" />
+
+                {/* Content */}
+                <div className={`ml-12 md:ml-0 md:w-1/2 ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
+                  <div className="rounded-lg border border-border bg-card p-4 transition-all duration-300 hover:border-primary/30">
+                    <span className="font-mono-display text-primary text-sm font-bold">{item.year}</span>
+                    <h3 className="font-mono-display font-semibold mt-1">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground mt-1">{item.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery */}
+      <section className="container pb-20">
+        <h2 className="font-mono-display text-2xl font-bold mb-8 text-primary">
+          <Images className="inline h-7 w-7 mr-2" />
+          // Gallery
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {galleryImages.map((img, i) => (
+            <button
+              key={i}
+              onClick={() => setLightbox(i)}
+              className="group relative overflow-hidden rounded-lg border border-border aspect-square"
+            >
+              <img
+                src={img.src}
+                alt={img.alt}
+                loading="lazy"
+                width={640}
+                height={640}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <span className="font-mono-display text-sm text-primary">{img.caption}</span>
+              </div>
+            </button>
+          ))}
+        </div>
+      </section>
+
+      {/* Lightbox */}
+      {lightbox !== null && (
+        <div className="fixed inset-0 z-50 bg-background/90 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setLightbox(null)}>
+          <button onClick={() => setLightbox(null)} className="absolute top-6 right-6 text-foreground hover:text-primary transition-colors">
+            <X className="h-8 w-8" />
+          </button>
+          <div className="max-w-3xl max-h-[80vh]" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={galleryImages[lightbox].src}
+              alt={galleryImages[lightbox].alt}
+              className="w-full h-auto max-h-[75vh] object-contain rounded-lg"
+            />
+            <p className="text-center font-mono-display text-sm text-muted-foreground mt-3">
+              {galleryImages[lightbox].caption}
+            </p>
+          </div>
+        </div>
+      )}
 
       {/* Features */}
       <section className="container pb-20">
