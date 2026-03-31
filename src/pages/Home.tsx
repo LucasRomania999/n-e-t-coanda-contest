@@ -120,27 +120,19 @@ const Home = () => {
           <History className="inline h-7 w-7 mr-2" />
           // Contest History
         </h2>
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-px" />
-
-          <div className="space-y-8">
-            {timeline.map((item, i) => (
-              <div key={item.year} className={`relative flex items-start gap-6 md:gap-0 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
-                {/* Dot */}
-                <div className="absolute left-4 md:left-1/2 w-3 h-3 rounded-full bg-primary border-2 border-background -translate-x-1.5 mt-1.5 z-10" />
-
-                {/* Content */}
-                <div className={`ml-12 md:ml-0 md:w-1/2 ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
-                  <div className="rounded-lg border border-border bg-card p-4 transition-all duration-300 hover:border-primary/30">
-                    <span className="font-mono-display text-primary text-sm font-bold">{item.year}</span>
-                    <h3 className="font-mono-display font-semibold mt-1">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-1">{item.description}</p>
-                  </div>
-                </div>
+        <div className="relative pl-8 border-l-2 border-border ml-4 space-y-8">
+          {timeline.map((item) => (
+            <div key={item.year} className="relative">
+              {/* Dot */}
+              <div className="absolute -left-[calc(2rem+5px)] w-3 h-3 rounded-full bg-primary border-2 border-background top-1.5" />
+              
+              <div className="rounded-lg border border-border bg-card p-4 transition-all duration-300 hover:border-primary/30 max-w-xl">
+                <span className="font-mono-display text-primary text-sm font-bold">{item.year}</span>
+                <h3 className="font-mono-display font-semibold mt-1">{item.title}</h3>
+                <p className="text-sm text-muted-foreground mt-1">{item.description}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
