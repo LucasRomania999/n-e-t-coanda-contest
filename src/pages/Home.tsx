@@ -41,12 +41,14 @@ const timeline = [
 ];
 
 const galleryImages = [
-  { src: gallery3dPrinting, alt: "Students working with 3D printers during the practical contest", caption: "3D Printing Workshop" },
-  { src: galleryExam, alt: "Contestants taking the written theoretical exam", caption: "Theoretical Exam" },
-  { src: galleryAwards, alt: "Award ceremony with winners receiving trophies", caption: "Award Ceremony" },
-  { src: galleryTeamwork, alt: "Students collaborating on engineering prototypes", caption: "Team Collaboration" },
-  { src: galleryParts, alt: "3D printed mechanical parts and prototypes", caption: "3D Printed Prototypes" },
-  { src: galleryVenue, alt: "The Mechanical Faculty venue in Timișoara", caption: "Contest Venue" },
+  { src: galleryGroupPhoto, alt: "All participants and organizers — 3rd Edition 2025", caption: "Group Photo — 2025" },
+  { src: galleryLecture, alt: "Opening ceremony at the Mechanical Faculty lecture hall", caption: "Opening Ceremony" },
+  { src: galleryWinner1, alt: "Award ceremony — winner receiving diploma and prize", caption: "Award Ceremony" },
+  { src: galleryWinner2, alt: "Contestant receiving diploma and backpack prize", caption: "Prize Winner" },
+  { src: galleryWinner3, alt: "Student awarded diploma at the 3rd Edition", caption: "Diploma Award" },
+  { src: galleryWinner4, alt: "Female contestant receiving recognition and prize", caption: "Recognition" },
+  { src: galleryWinner5, alt: "Winner holding diploma alongside organizers", caption: "Winner & Organizers" },
+  { src: galleryWinner6, alt: "Contestant with diploma and backpack prize", caption: "Prize Presentation" },
 ];
 
 const Home = () => {
