@@ -3,12 +3,14 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Trophy, BookOpen, ClipboardList, Printer, History, Images, X } from "lucide-react";
 
-import gallery3dPrinting from "@/assets/gallery-3d-printing.jpg";
-import galleryExam from "@/assets/gallery-exam.jpg";
-import galleryAwards from "@/assets/gallery-awards.jpg";
-import galleryTeamwork from "@/assets/gallery-teamwork.jpg";
-import galleryParts from "@/assets/gallery-parts.jpg";
-import galleryVenue from "@/assets/gallery-venue.jpg";
+import galleryGroupPhoto from "@/assets/gallery-group-photo.jpg";
+import galleryLecture from "@/assets/gallery-lecture.jpg";
+import galleryWinner1 from "@/assets/gallery-winner1.jpg";
+import galleryWinner2 from "@/assets/gallery-winner2.jpg";
+import galleryWinner3 from "@/assets/gallery-winner3.jpg";
+import galleryWinner4 from "@/assets/gallery-winner4.jpg";
+import galleryWinner5 from "@/assets/gallery-winner5.jpg";
+import galleryWinner6 from "@/assets/gallery-winner6.jpg";
 
 const features = [
   {
@@ -39,12 +41,14 @@ const timeline = [
 ];
 
 const galleryImages = [
-  { src: gallery3dPrinting, alt: "Students working with 3D printers during the practical contest", caption: "3D Printing Workshop" },
-  { src: galleryExam, alt: "Contestants taking the written theoretical exam", caption: "Theoretical Exam" },
-  { src: galleryAwards, alt: "Award ceremony with winners receiving trophies", caption: "Award Ceremony" },
-  { src: galleryTeamwork, alt: "Students collaborating on engineering prototypes", caption: "Team Collaboration" },
-  { src: galleryParts, alt: "3D printed mechanical parts and prototypes", caption: "3D Printed Prototypes" },
-  { src: galleryVenue, alt: "The Mechanical Faculty venue in Timișoara", caption: "Contest Venue" },
+  { src: galleryGroupPhoto, alt: "All participants and organizers — 3rd Edition 2025", caption: "Group Photo — 2025" },
+  { src: galleryLecture, alt: "Opening ceremony at the Mechanical Faculty lecture hall", caption: "Opening Ceremony" },
+  { src: galleryWinner1, alt: "Award ceremony — winner receiving diploma and prize", caption: "Award Ceremony" },
+  { src: galleryWinner2, alt: "Contestant receiving diploma and backpack prize", caption: "Prize Winner" },
+  { src: galleryWinner3, alt: "Student awarded diploma at the 3rd Edition", caption: "Diploma Award" },
+  { src: galleryWinner4, alt: "Female contestant receiving recognition and prize", caption: "Recognition" },
+  { src: galleryWinner5, alt: "Winner holding diploma alongside organizers", caption: "Winner & Organizers" },
+  { src: galleryWinner6, alt: "Contestant with diploma and backpack prize", caption: "Prize Presentation" },
 ];
 
 const Home = () => {
@@ -138,7 +142,7 @@ const Home = () => {
           <Images className="inline h-7 w-7 mr-2" />
           // Gallery
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {galleryImages.map((img, i) => (
             <button
               key={i}
