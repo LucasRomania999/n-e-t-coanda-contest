@@ -70,8 +70,8 @@ const Home = () => {
               </span>
             </h1>
             <p className="text-muted-foreground text-lg max-w-xl">
-              Compete in the National English Technology contest — demonstrate your mastery of technical 
-              English through a written exam and a hands-on 3D printing challenge.
+              Now in its 4th edition, the National English Technology contest brings together 
+              students aged 16–19 from five counties for a written theoretical exam and a hands-on 3D printing challenge.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/enroll">
