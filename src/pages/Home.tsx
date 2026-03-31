@@ -3,12 +3,14 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Trophy, BookOpen, ClipboardList, Printer, History, Images, X } from "lucide-react";
 
-import gallery3dPrinting from "@/assets/gallery-3d-printing.jpg";
-import galleryExam from "@/assets/gallery-exam.jpg";
-import galleryAwards from "@/assets/gallery-awards.jpg";
-import galleryTeamwork from "@/assets/gallery-teamwork.jpg";
-import galleryParts from "@/assets/gallery-parts.jpg";
-import galleryVenue from "@/assets/gallery-venue.jpg";
+import galleryGroupPhoto from "@/assets/gallery-group-photo.jpg";
+import galleryLecture from "@/assets/gallery-lecture.jpg";
+import galleryWinner1 from "@/assets/gallery-winner1.jpg";
+import galleryWinner2 from "@/assets/gallery-winner2.jpg";
+import galleryWinner3 from "@/assets/gallery-winner3.jpg";
+import galleryWinner4 from "@/assets/gallery-winner4.jpg";
+import galleryWinner5 from "@/assets/gallery-winner5.jpg";
+import galleryWinner6 from "@/assets/gallery-winner6.jpg";
 
 const features = [
   {
