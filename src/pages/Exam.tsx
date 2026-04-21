@@ -35,7 +35,7 @@ const Exam = () => {
                 </div>
                 <div className="flex flex-col gap-2">
                   <a
-                    href="https://bit.ly/3QpeNHo"
+                    href="https://www.bookwidgets.com/play/Sa8b_w4n-iQAFFBNz0QAAA/THYL9TZ/3d-printing-and?teacher_id=4617244332261376"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block"
