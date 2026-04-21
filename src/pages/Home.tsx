@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Trophy, BookOpen, ClipboardList, Printer, History, Images, X } from "lucide-react";
+import { Calendar, MapPin, Trophy, BookOpen, ClipboardList, Printer, History, Images, X, FileText, Download } from "lucide-react";
 
 import galleryGroupPhoto from "@/assets/gallery-group-photo.jpg";
 import galleryLecture from "@/assets/gallery-lecture.jpg";
@@ -183,6 +183,40 @@ const Home = () => {
           </div>
         </div>
       )}
+
+
+      {/* Documents */}
+      <section className="container pb-20">
+        <h2 className="font-mono-display text-2xl font-bold mb-8 text-primary">
+          <FileText className="inline h-7 w-7 mr-2" />
+          // Official Documents
+        </h2>
+        <p className="text-muted-foreground text-sm mb-6 max-w-2xl">
+          Download, print and sign the contest regulations and the data processing consent form.
+        </p>
+        <div className="grid md:grid-cols-2 gap-4 max-w-3xl">
+          {[
+            { href: "/downloads/Regulament_NET_2026.doc", title: "Contest Regulations", subtitle: "Regulament de organizare — NET 2026", file: "Regulament_NET_2026.doc" },
+            { href: "/downloads/Acord_prelucrarea_datelor.docx", title: "Data Processing Consent", subtitle: "Acord prelucrarea datelor personale", file: "Acord_prelucrarea_datelor.docx" },
+          ].map((doc) => (
+            <a
+              key={doc.file}
+              href={doc.href}
+              download
+              className="group flex items-center gap-4 rounded-lg border border-border bg-card p-5 transition-all duration-300 hover:border-primary/50 hover:glow-border"
+            >
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <FileText className="h-6 w-6" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <h3 className="font-mono-display font-semibold truncate">{doc.title}</h3>
+                <p className="text-xs text-muted-foreground truncate">{doc.subtitle}</p>
+              </div>
+              <Download className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
+            </a>
+          ))}
+        </div>
+      </section>
 
       {/* Features */}
       <section className="container pb-20">
