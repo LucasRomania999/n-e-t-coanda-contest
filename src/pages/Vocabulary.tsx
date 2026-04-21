@@ -2,7 +2,8 @@ import { useState, useMemo } from "react";
 import { vocabularyList, type VocabWord } from "@/data/vocabulary";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { Search, BookOpen, Check } from "lucide-react";
+import { Search, BookOpen, Check, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const categories = ["All", "3D Printing", "Engineering", "Technology", "Materials", "Computing"] as const;
