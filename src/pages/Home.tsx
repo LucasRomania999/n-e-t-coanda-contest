@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Trophy, BookOpen, ClipboardList, Printer, History, Images, X } from "lucide-react";
+import { Calendar, MapPin, Trophy, BookOpen, ClipboardList, Printer, History, Images, X, FileText, Download } from "lucide-react";
 
 import galleryGroupPhoto from "@/assets/gallery-group-photo.jpg";
 import galleryLecture from "@/assets/gallery-lecture.jpg";
