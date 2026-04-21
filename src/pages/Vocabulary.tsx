@@ -37,14 +37,22 @@ const Vocabulary = () => {
   return (
     <div className="min-h-screen pt-16">
       <div className="container py-12">
-        <div className="mb-8">
-          <h1 className="font-mono-display text-3xl font-bold mb-2">
-            <BookOpen className="inline h-8 w-8 text-primary mr-2" />
-            Vocabulary Preparation
-          </h1>
-          <p className="text-muted-foreground">
-            Master these 50 technical English terms before the contest.
-          </p>
+        <div className="mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+          <div>
+            <h1 className="font-mono-display text-3xl font-bold mb-2">
+              <BookOpen className="inline h-8 w-8 text-primary mr-2" />
+              Vocabulary Preparation
+            </h1>
+            <p className="text-muted-foreground">
+              Master these technical English terms before the contest.
+            </p>
+          </div>
+          <Button asChild variant="outline" className="font-mono-display">
+            <a href="/downloads/Vocabular_2026.pdf" download>
+              <Download className="h-4 w-4 mr-2" />
+              Download PDF
+            </a>
+          </Button>
         </div>
 
         {/* Progress */}
