@@ -33,11 +33,24 @@ const Exam = () => {
                   <Calendar className="h-4 w-4" />
                   <span className="font-mono-display">Available: 24 April 2026, 09:00 - 10:30</span>
                 </div>
-                <div className="flex items-center gap-2 rounded-md border border-warning/30 bg-warning/5 px-3 py-2 text-sm">
-                  <Lock className="h-4 w-4 text-warning" />
-                  <span className="text-warning font-mono-display text-xs uppercase tracking-wider">
-                    Access locked — opens on contest day
-                  </span>
+                <div className="flex flex-col gap-2">
+                  <a
+                    href="https://bit.ly/3QpeNHo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <Button variant="hero-outline" className="w-full justify-start">
+                      <FileText className="h-4 w-4 mr-2" />
+                      Practice Exam
+                    </Button>
+                  </a>
+                  <a href="#" className="block" aria-disabled="true">
+                    <Button variant="outline" className="w-full justify-start" disabled>
+                      <Lock className="h-4 w-4 mr-2" />
+                      Official Exam — opens on contest day
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>
