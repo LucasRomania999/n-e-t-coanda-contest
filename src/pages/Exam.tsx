@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { FileText, Printer, Lock, Calendar } from "lucide-react";
+import { FileText, Printer, Calendar, Lock } from "lucide-react";
 
 const Exam = () => {
   return (
@@ -31,7 +31,7 @@ const Exam = () => {
                 </p>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
                   <Calendar className="h-4 w-4" />
-                  <span className="font-mono-display">Available: 24 April 2026, 09:00 - 10:30</span>
+                  <span className="font-mono-display">24 April 2026, 09:00 - 10:30</span>
                 </div>
                 <div className="flex flex-col gap-2">
                   <a
@@ -40,15 +40,20 @@ const Exam = () => {
                     rel="noopener noreferrer"
                     className="block"
                   >
-                    <Button variant="hero-outline" className="w-full justify-start">
+                    <Button variant="outline" className="w-full justify-start">
                       <FileText className="h-4 w-4 mr-2" />
                       Practice Exam
                     </Button>
                   </a>
-                  <a href="#" className="block" aria-disabled="true">
-                    <Button variant="outline" className="w-full justify-start" disabled>
-                      <Lock className="h-4 w-4 mr-2" />
-                      Official Exam — opens on contest day
+                  <a
+                    href="https://www.bookwidgets.com/play/8L_EjR3Y-iQAFPEx50QAAA/ZHZALZK/n-e-t-2?teacher_id=5671856774840320"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <Button variant="hero" className="w-full justify-start">
+                      <FileText className="h-4 w-4 mr-2" />
+                      Official Exam — ACTIVE NOW
                     </Button>
                   </a>
                 </div>
