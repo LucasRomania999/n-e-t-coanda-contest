@@ -159,6 +159,14 @@ const Home = () => {
             </button>
           ))}
         </div>
+        <div className="flex justify-center mt-8">
+          <Link to="/gallery">
+            <Button variant="hero-outline" size="lg">
+              <Images className="h-5 w-5 mr-2" />
+              View Full Gallery
+            </Button>
+          </Link>
+        </div>
       </section>
 
       {/* Lightbox */}
