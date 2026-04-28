@@ -9,6 +9,7 @@ const navItems = [
   { label: "Prepare", path: "/vocabulary" },
   { label: "Enroll", path: "/enroll" },
   { label: "Exam", path: "/exam" },
+  { label: "Resources", path: "/resources" },
 ];
 
 const Navbar = () => {
