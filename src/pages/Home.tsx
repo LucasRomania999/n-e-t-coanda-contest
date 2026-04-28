@@ -78,8 +78,14 @@ const Home = () => {
               students aged 16–19 from five counties for a written theoretical exam and a hands-on 3D printing challenge.
             </p>
             <div className="flex flex-wrap gap-4">
+              <Link to="/results">
+                <Button variant="hero" size="lg">
+                  <Trophy className="h-5 w-5 mr-2" />
+                  View Results
+                </Button>
+              </Link>
               <Link to="/enroll">
-                <Button variant="hero" size="lg">Register Now</Button>
+                <Button variant="hero-outline" size="lg">Register</Button>
               </Link>
               <Link to="/vocabulary">
                 <Button variant="hero-outline" size="lg">Start Preparing</Button>
@@ -87,6 +93,29 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Results Banner */}
+      <section className="container pt-10">
+        <Link to="/results" className="block group">
+          <div className="relative overflow-hidden rounded-xl border-2 border-primary/40 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent p-6 md:p-8 transition-all duration-300 hover:border-primary hover:shadow-[0_0_30px_-5px_hsl(var(--primary)/0.5)]">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-primary/15 text-primary">
+                  <Trophy className="h-7 w-7" />
+                </div>
+                <div>
+                  <p className="font-mono-display text-xs uppercase tracking-widest text-primary">// Now Available</p>
+                  <h3 className="text-xl md:text-2xl font-bold">NET'26 Final Results</h3>
+                  <p className="text-sm text-muted-foreground">Anonymized scoreboard from this year's edition.</p>
+                </div>
+              </div>
+              <Button variant="hero" size="lg" className="shrink-0 group-hover:scale-105 transition-transform">
+                See Results →
+              </Button>
+            </div>
+          </div>
+        </Link>
       </section>
 
       {/* Event Details */}

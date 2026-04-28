@@ -10,6 +10,7 @@ const navItems = [
   { label: "Enroll", path: "/enroll" },
   { label: "Exam", path: "/exam" },
   { label: "Resources", path: "/resources" },
+  { label: "Results", path: "/results" },
 ];
 
 const Navbar = () => {
