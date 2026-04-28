@@ -3,14 +3,14 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Trophy, BookOpen, ClipboardList, Printer, History, Images, X, FileText, Download } from "lucide-react";
 
-import galleryGroupPhoto from "@/assets/gallery-group-photo.jpg";
-import galleryLecture from "@/assets/gallery-lecture.jpg";
-import galleryWinner1 from "@/assets/gallery-winner1.jpg";
-import galleryWinner2 from "@/assets/gallery-winner2.jpg";
-import galleryWinner3 from "@/assets/gallery-winner3.jpg";
-import galleryWinner4 from "@/assets/gallery-winner4.jpg";
-import galleryWinner5 from "@/assets/gallery-winner5.jpg";
-import galleryWinner6 from "@/assets/gallery-winner6.jpg";
+const galleryImages = Array.from({ length: 8 }, (_, i) => {
+  const n = String(i + 1).padStart(2, "0");
+  return {
+    src: `/gallery/net26-${n}.jpg`,
+    alt: `NET'26 contest moment ${i + 1}`,
+    caption: `NET'26 — #${i + 1}`,
+  };
+});
 
 const features = [
   {
@@ -40,16 +40,6 @@ const timeline = [
   { year: "2026", title: "4th Edition — NET'26", description: "The most exciting edition yet! Gorj county joins the contest for the first time, expanding to five participating counties. The oral exam is replaced by a practical 3D printing challenge, held at the Mechanical Faculty in Timișoara on 25 April 2026." },
 ];
 
-const galleryImages = [
-  { src: galleryGroupPhoto, alt: "All participants and organizers — 3rd Edition 2025", caption: "Group Photo — 2025" },
-  { src: galleryLecture, alt: "Opening ceremony at the Mechanical Faculty lecture hall", caption: "Opening Ceremony" },
-  { src: galleryWinner1, alt: "Award ceremony — winner receiving diploma and prize", caption: "Award Ceremony" },
-  { src: galleryWinner2, alt: "Contestant receiving diploma and backpack prize", caption: "Prize Winner" },
-  { src: galleryWinner3, alt: "Student awarded diploma at the 3rd Edition", caption: "Diploma Award" },
-  { src: galleryWinner4, alt: "Female contestant receiving recognition and prize", caption: "Recognition" },
-  { src: galleryWinner5, alt: "Winner holding diploma alongside organizers", caption: "Winner & Organizers" },
-  { src: galleryWinner6, alt: "Contestant with diploma and backpack prize", caption: "Prize Presentation" },
-];
 
 const Home = () => {
   const [lightbox, setLightbox] = useState<number | null>(null);
