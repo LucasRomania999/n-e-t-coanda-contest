@@ -31,7 +31,7 @@ const Exam = () => {
                 </p>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
                   <Calendar className="h-4 w-4" />
-                  <span className="font-mono-display">24 April 2026, 09:00 - 10:30</span>
+                  <span className="font-mono-display">25 April 2026, 09:00 - 10:30</span>
                 </div>
                 <div className="flex flex-col gap-2">
                   <a href="#" className="block" aria-disabled="true">
@@ -70,7 +70,7 @@ const Exam = () => {
                 </p>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
                   <Calendar className="h-4 w-4" />
-                  <span className="font-mono-display">Available: 24 April 2026, 11:00 - 14:00</span>
+                  <span className="font-mono-display">Available: 25 April 2026, 11:00 - 14:00</span>
                 </div>
                 <div className="flex items-center gap-2 rounded-md border border-warning/30 bg-warning/5 px-3 py-2 text-sm">
                   <Lock className="h-4 w-4 text-warning" />
