@@ -37,7 +37,7 @@ const timeline = [
   { year: "2023", title: "1st Edition — The Beginning", description: "Henri Coandă Technical College launched the first National English Technology contest with participants from four counties: Timiș, Arad, Hunedoara, and Caraș-Severin. The format featured a written theoretical exam and an oral exam. 25–40 students from 11th and 12th grades (ages 16–19) competed." },
   { year: "2024", title: "2nd Edition — Growing Strong", description: "The contest returned with growing enthusiasm, maintaining participation from the same four counties. Students demonstrated improving technical English proficiency through the written and oral exam format." },
   { year: "2025", title: "3rd Edition — Established Tradition", description: "By its third year, the contest became a recognized regional event across Timiș, Arad, Hunedoara, and Caraș-Severin counties, with consistent participation of 25–40 contestants per edition." },
-  { year: "2026", title: "4th Edition — NET'26", description: "The most exciting edition yet! Gorj county joins the contest for the first time, expanding to five participating counties. The oral exam is replaced by a practical 3D printing challenge, held at the Mechanical Faculty in Timișoara on 24 April 2026." },
+  { year: "2026", title: "4th Edition — NET'26", description: "The most exciting edition yet! Gorj county joins the contest for the first time, expanding to five participating counties. The oral exam is replaced by a practical 3D printing challenge, held at the Mechanical Faculty in Timișoara on 25 April 2026." },
 ];
 
 const galleryImages = [
@@ -104,7 +104,7 @@ const Home = () => {
             </div>
             <div>
               <p className="text-sm text-muted-foreground font-mono-display uppercase tracking-wider">Date</p>
-              <p className="text-lg font-semibold">24 April 2026</p>
+              <p className="text-lg font-semibold">25 April 2026</p>
             </div>
           </div>
           <div className="flex items-center gap-4 rounded-lg border border-border bg-card p-5">
